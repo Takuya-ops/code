@@ -3,7 +3,7 @@ import Language from './Language';
 
 class App extends React.Component {
   render() {
-    // 指定されたコードを貼り付けてください
+  
     const languageList = [
       {
         name: 'HTML & CSS',
