@@ -22,7 +22,7 @@ print(dw_statistic)
 import numpy as np
 from sklearn.linear_model import LinearRegression
 
-# 人工的なサンプルデータの生成
+# サンプルデータの生成
 np.random.seed(42)
 n = 100
 X = np.linspace(0, 10, n).reshape(-1, 1)
@@ -38,4 +38,4 @@ dw_numerator = np.sum(np.diff(residuals) ** 2)
 dw_denominator = np.sum(residuals**2)
 dw_statistic = dw_numerator / dw_denominator
 
-dw_statistic
+print(dw_statistic)
