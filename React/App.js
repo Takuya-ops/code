@@ -36,10 +36,10 @@ class App extends React.Component {
         <h1>言語一覧</h1>
         <div className='language'>
          
-          {/* mapメソッドを用いて、Languageコンポーネントを表示してください */}
+          {/* mapメソッドを用いて、Languageコンポーネントを表示 */}
           {languageList.map((languageItem) => {
             return (
-              // Languageコンポーネントを呼び出し、その中でpropsを渡してください
+              // Languageコンポーネントを呼び出し、その中でpropsを渡す
               <Language
                 name = {languageItem.name}
                 image = {languageItem.image}
