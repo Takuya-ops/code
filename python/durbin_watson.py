@@ -33,7 +33,7 @@ model = LinearRegression().fit(X, Y)
 Y_pred = model.predict(X)
 residuals = Y - Y_pred
 
-# ダービン・ワトソン統計量の計算
+# ダービン・ワトソン統計量の計算(0~4までの範囲)
 dw_numerator = np.sum(np.diff(residuals) ** 2)
 dw_denominator = np.sum(residuals**2)
 dw_statistic = dw_numerator / dw_denominator
