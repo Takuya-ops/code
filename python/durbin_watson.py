@@ -2,13 +2,18 @@ import numpy as np
 import statsmodels.api as sm
 from statsmodels.stats.stattools import durbin_watson
 
+np.random.seed(42)
+n = 100
+X = np.linspace(0, 10, n)
+Y = 3.0 + 1.5 * X + np.random.normal(0, 2, n)
+
 # サンプルデータを生成
 np.random.seed(42)
 n = 100  # データ点の数
 X = np.linspace(0, 10, n)
 Y = 2.0 + 1.5 * X + np.random.normal(0, 2, n)  # 線形関係にランダムノイズを加える
 
-# 線形回帰モデルのフィット
+# 線形回帰モデル
 X = sm.add_constant(X)  # 定数項（切片)を追加
 model = sm.OLS(Y, X).fit()
 
@@ -28,7 +33,7 @@ n = 100
 X = np.linspace(0, 10, n).reshape(-1, 1)
 Y = 2.0 + 1.5 * X.flatten() + np.random.normal(0, 2, n)
 
-# 線形回帰モデルのフィット
+# 線形回帰モデル
 model = LinearRegression().fit(X, Y)
 Y_pred = model.predict(X)
 residuals = Y - Y_pred
