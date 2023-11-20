@@ -32,6 +32,7 @@ func TestStringDistance(t *testing.T) {
 		{name: "diffs 2", lhs: "foots", rhs: "foatt", want: 2},
 		{name: "diffs 3", lhs: "footts", rhs: "faotat", want: 3},
 		{name: "diff 1", lhs: "こぞい", rhs: "こよい", want: 1},
+		{name: "diff 2", lhs: "こぞいこ", rhs: "こよいは", want: 2},
 	}
 	for _, tc := range tests {
 		got := StringDistance(tc.lhs, tc.rhs)
