@@ -37,7 +37,7 @@ func TestStringDistance(t *testing.T) {
 	for _, tc := range tests {
 		got := StringDistance(tc.lhs, tc.rhs)
 		if !reflect.DeepEqual(tc.want, got) {
-			t.Fatalf("%s:expected: %v, git: %v", tc.name, tc.want, got)
+			t.Fatalf("%s:expected: %v, get: %v", tc.name, tc.want, got)
 		}
 	}
 }
